@@ -1,0 +1,3 @@
+include ':demoapp'
+include ':library'
+rootProject.name = "Audio Focus Controller"

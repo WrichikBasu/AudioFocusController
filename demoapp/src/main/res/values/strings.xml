@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Audio Focus Controller Demo</string>
+
+    <string name="usageLabel">Usage:</string>
+    <string name="contentTypeLabel">Content type:</string>
+    <string name="streamTypeLabel">Stream type:</string>
+    <string name="DurationHintLabel">Duration hint:</string>
+    <string name="currentStatus">Current status:</string>
+
+    <string name="delayedFocusCheckBoxLabel">Accept delayed focus</string>
+    <string name="pauseDuckCheckBoxLabel">Pause when ducked</string>
+    <string name="audioNoisyCheckBoxLabel">Listen to Audio becoming noisy broadcast</string>
+
+    <string name="requestFocus">Request audio focus</string>
+    <string name="abandonFocus">Abandon audio focus</string>
+
+    <string name="editingSwitchOnLabel">Editing ON\n<small>Restrict editing to request focus.</small></string>
+    <string name="editingSwitchOffLabel">Editing OFF\n<small>Focus will automatically be abandoned once turned on.</small></string>
+
+
+
+</resources>
