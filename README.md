@@ -30,7 +30,7 @@ allprojects {
   **2.** Add the following dependency:
 ```
 dependencies {
-  implementation 'com.github.WrichikBasu:AudioFocusController:Tag'
+  implementation 'com.github.WrichikBasu:AudioFocusController:v1.0'
 }
 ```
 
