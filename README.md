@@ -1,11 +1,23 @@
 # AudioFocusController
 <i>An Android library to help you manage Audio Focus in your app with minimal code.</i>
 
+![GitHub All Releases](https://img.shields.io/github/downloads/WrichikBasu/AudioFocusController/total)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/WrichikBasu/AudioFocusController)
+![GitHub license](https://img.shields.io/github/license/WrichikBasu/AudioFocusController)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/WrichikBasu/AudioFocusController)
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/WrichikBasu/AudioFocusController)](https://github.com/WrichikBasu/AudioFocusController/releases/latest)
+![GitHub Release Date](https://img.shields.io/github/release-date/WrichikBasu/AudioFocusController)
+
+![Minimum SDK version](https://img.shields.io/badge/minimum%20sdk%20version-Lollipop%20(API%2021)-brightgreen)
+![Target SDK version](https://img.shields.io/badge/target%20sdk%20version-R%20(API%2030)-brightgreen)
+
 You will have to manage Audio Focus in your Android app if you want to play any type of sound. Be it an alarm tone, music or a voice call, you will have to first ask for focus from the system, and play the tone if and only if the system grants you focus. With the help of this library, you can reduce the number of lines that you have to write.
 
 ## Steps to use this library:
 ### 1. Import the library to your Android Studio project (Gradle):
-**1.** Add the following to your project's (root) `build.gradle` file at the end of all other repositories:
+  **1.** Add the following to your project's (root) `build.gradle` file at the end of all other repositories:
 ```
 allprojects {
   repositories {
@@ -15,18 +27,18 @@ allprojects {
 }
 ```
 
-**2.** Add the following dependency:
+  **2.** Add the following dependency:
 ```
 dependencies {
   implementation 'com.github.WrichikBasu:AudioFocusController:Tag'
 }
 ```
 
-**3.** Sync your project with Gradle files.
+  **3.** Sync your project with Gradle files.
 
 ### 2. Create an `AudioFocusController` object:
 
-**1.** Implement the `AudioFocusController.OnAudioFocusChangeListener` interface:
+  **1.** Implement the `AudioFocusController.OnAudioFocusChangeListener` interface:
 
 You can either implement this in your class,...
 
@@ -61,7 +73,7 @@ AudioFocusController.OnAudioFocusChangeListener listener = new AudioFocusControl
 }
 ```
 
-**2.** Use the `AudioFocusController.Builder` class to create an instance of the `AudioFocusController` class:
+  **2.** Use the `AudioFocusController.Builder` class to create an instance of the `AudioFocusController` class:
 
 ```java
 audioFocusController = new AudioFocusController.Builder(context) // Context must be passed
@@ -76,17 +88,19 @@ audioFocusController = new AudioFocusController.Builder(context) // Context must
             .build();
 ```
 
-**3.**  We are almost done. **Every** time you want to start/resume playback, call `audioFocusController.requestFocus()`. If the system grants focus, the `OnAudioFocusChangeListener.resume()` method will be called. Note, that if the system grants delayed focus, or rejects the request, then nothing will happen. However, in case of a delayed request, the `resume()` method will be called once the system finally grants focus.
+### 3. Handling audio focus:
+  
+1. We are almost done. **Every** time you want to start/resume playback, call `audioFocusController.requestFocus()`. If the system grants focus, the `OnAudioFocusChangeListener.resume()` method will be called. Note, that if the system grants delayed focus, or rejects the request, then nothing will happen. However, in case of a delayed request, the `resume()` method will be called once the system finally grants focus.
 
-**Every** time you pause playback, call `audioFocusController.abandonFocus()` so that the focus is freed and other apps can use it.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Every** time you pause playback, call `audioFocusController.abandonFocus()` so that the focus is freed and other apps can use it.
 
-**4.** If focus is lost suddenly, then the `OnAudioFocusChangeListener.pause()` method will be called, and you should stop playback immediately. Do **NOT** abandon focus, because the library will do it for you when necessary. Note that you do not need to know whether or not you have focus, because every time you want to start playback, you will request focus, as stated in step 3 above. If focus is granted, you will be notified via the `resume()` method.
+2. If focus is lost suddenly, then the `OnAudioFocusChangeListener.pause()` method will be called, and you should stop playback immediately. Do **NOT** abandon focus, because the library will do it for you when necessary. Note that you do not need to know whether or not you have focus, because every time you want to start playback, you will request focus, as stated in step 3 above. If focus is granted, you will be notified via the `resume()` method.
 
-If focus is restored later by the system automatically, the `resume()` method will be called.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If focus is restored later by the system automatically, the `resume()` method will be called.
 
-**5.** If you have passed `false` to the `AudioFocusController.Builder.setPauseWhenDucked(boolean)` method, the `OnAudioFocusChangeListener.decreaseVolume()` method will be called every time the system asks us to duck the volume. Once the ducking period is over, the `OnAudioFocusChangeListener.increaseVolume()` will be called.
+3. If you have passed `false` to the `AudioFocusController.Builder.setPauseWhenDucked(boolean)` method, the `OnAudioFocusChangeListener.decreaseVolume()` method will be called every time the system asks us to duck the volume. Once the ducking period is over, the `OnAudioFocusChangeListener.increaseVolume()` will be called.
 
-If you have passed `true`, then you will be paused (via `pause()`) every time the system asks us to duck, and later resumed (via `resume()`) automatically.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have passed `true`, then you will be paused (via `pause()`) every time the system asks us to duck, and later resumed (via `resume()`) automatically.
 
 ### That's it!
 
