@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 					.setContentType(viewModel.getContentType())
 					.setDurationHint(viewModel.getDurationHint())
 					.setUsage(viewModel.getUsage())
+					.setStream(viewModel.getStreamType())
 					.build();
 		}
 
