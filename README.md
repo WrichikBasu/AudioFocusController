@@ -12,10 +12,15 @@
 ![Minimum SDK version](https://img.shields.io/badge/minimum%20sdk%20version-Lollipop%20(API%2021)-brightgreen)
 ![Target SDK version](https://img.shields.io/badge/target%20sdk%20version-R%20(API%2030)-brightgreen)
 
-You will have to manage Audio Focus in your Android app if you want to play any type of sound. Be it an alarm tone, music or a voice call, you will have to first ask for focus from the system, and play the tone if and only if the system grants you focus. With the help of this library, you can reduce the number of lines that you have to write.
+It is important to control audio focus in your app if you want to play any sound (media, voice call, alarm, etc.) It would not be a pleasant situation to the user if two or more apps simultaneously play different sounds. The system of granting and abandoning audio focus makes sure that no two apps play their sounds at once. Therefore, before playing any sound, you must request the system for audio focus.
 
-## Steps to use this library:
-Please refer to the [Quick Setup Guide](https://github.com/WrichikBasu/AudioFocusController/wiki/Quick-Setup-Guide) in the Wiki section of this repoitory.
+This library makes it easy for you to request audio focus, thereby reducing the number of lines you have to write.
+
+## Quick Setup Guide:
+Please see here: [https://wrichikbasu.github.io/AudioFocusController/#quick-setup-guide](https://wrichikbasu.github.io/AudioFocusController/#quick-setup-guide)
+
+## Documentation:
+Available here: https://wrichikbasu.github.io/AudioFocusController/javadoc/index.html
 
 ## Demonstration app:
 
