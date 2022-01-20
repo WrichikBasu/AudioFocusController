@@ -38,6 +38,9 @@ project.afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
+                groupId = 'in.basulabs.audiofocuscontroller'
+                artifactId = 'library'
+                version = '2.0'
             }
         }
     }
