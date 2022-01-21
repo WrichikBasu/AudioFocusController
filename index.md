@@ -24,7 +24,7 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.WrichikBasu:AudioFocusController:v1.0'
+  implementation 'com.github.WrichikBasu:AudioFocusController:v2.1'
 }
 ```
 
