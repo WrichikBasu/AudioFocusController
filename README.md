@@ -1,16 +1,17 @@
 # AudioFocusController
 <i>An Android library to help you manage Audio Focus in your app with minimal code.</i>
 
-![GitHub All Releases](https://img.shields.io/github/downloads/WrichikBasu/AudioFocusController/total)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/WrichikBasu/AudioFocusController)
-![GitHub license](https://img.shields.io/github/license/WrichikBasu/AudioFocusController)
+<img alt="JitPack" src="https://img.shields.io/jitpack/version/com.github.WrichikBasu/AudioFocusController?color=%238737f0&style=for-the-badge">
 
-![GitHub last commit](https://img.shields.io/github/last-commit/WrichikBasu/AudioFocusController)
+![GitHub All Releases](https://img.shields.io/github/downloads/WrichikBasu/AudioFocusController/total?style=for-the-badge) &nbsp; 
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/WrichikBasu/AudioFocusController?style=for-the-badge) &nbsp; 
+![GitHub last commit](https://img.shields.io/github/last-commit/WrichikBasu/AudioFocusController?style=for-the-badge)
 
-[![](https://jitpack.io/v/WrichikBasu/AudioFocusController.svg)](https://jitpack.io/#WrichikBasu/AudioFocusController)
+![](https://img.shields.io/badge/Licence%3A%20library-Mozilla%20Public%20Licence%202.0-important?style=for-the-badge) &nbsp;
+![](https://img.shields.io/badge/Licence%3A%20demoapp-GNU%20AGPL%20v3.0-blue?style=for-the-badge)
 
-![Minimum SDK version](https://img.shields.io/badge/minimum%20sdk%20version-Lollipop%20(API%2021)-brightgreen)
-![Target SDK version](https://img.shields.io/badge/target%20sdk%20version-R%20(API%2030)-brightgreen)
+![](https://img.shields.io/badge/Minimum%20SDK%20version-Lollipop%20(API%2021)-%2306486b?style=for-the-badge) &nbsp; 
+![Target SDK version](https://img.shields.io/badge/target%20sdk%20version-Android%2012%20(API%2031)-brightgreen?style=for-the-badge)
 
 It is important to control audio focus in your app if you want to play any sound (media, voice call, alarm, etc.) It would not be a pleasant situation to the user if two or more apps simultaneously play different sounds. The system of granting and abandoning audio focus makes sure that no two apps play their sounds at once. Therefore, before playing any sound, you must request the system for audio focus.
 
