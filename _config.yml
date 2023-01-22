@@ -1,6 +1,6 @@
+title: AudioFocusController
+description: An Android library to help you manage Audio Focus in your app with minimal code.
+
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme
-
-title: AudioFocusController
-description: An Android library to help you manage Audio Focus in your app with minimal code.
