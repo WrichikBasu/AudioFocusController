@@ -4,14 +4,13 @@
 <img alt="JitPack" src="https://img.shields.io/jitpack/version/com.github.WrichikBasu/AudioFocusController?color=%238737f0&style=for-the-badge">
 
 ![GitHub All Releases](https://img.shields.io/github/downloads/WrichikBasu/AudioFocusController/total?style=for-the-badge) &nbsp; 
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/WrichikBasu/AudioFocusController?style=for-the-badge) &nbsp; 
 ![GitHub last commit](https://img.shields.io/github/last-commit/WrichikBasu/AudioFocusController?style=for-the-badge)
 
 ![](https://img.shields.io/badge/Licence%3A%20library-Mozilla%20Public%20Licence%202.0-important?style=for-the-badge) &nbsp;
 ![](https://img.shields.io/badge/Licence%3A%20demoapp-GNU%20AGPL%20v3.0-blue?style=for-the-badge)
 
-![](https://img.shields.io/badge/Minimum%20SDK%20version-Lollipop%20(API%2021)-%2306486b?style=for-the-badge) &nbsp; 
-![Target SDK version](https://img.shields.io/badge/target%20sdk%20version-Android%2012%20(API%2031)-brightgreen?style=for-the-badge)
+![minSDK](https://img.shields.io/badge/min_SDK-Lollipop%20(SDK%2021)-%2306486b?style=for-the-badge) &nbsp; 
+![targetSdk](https://img.shields.io/badge/target_SDK-Android_14_(SDK_34)-deep%20green?style=for-the-badge)
 
 ![GitHub deployments](https://img.shields.io/github/deployments/WrichikBasu/AudioFocusController/github-pages?label=Github%20Pages%20Deployment&style=for-the-badge)
 
