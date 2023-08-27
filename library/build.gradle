@@ -50,7 +50,7 @@ project.afterEvaluate {
                 components.getByName('release')
                 groupId = 'in.basulabs.audiofocuscontroller'
                 artifactId = 'library'
-                version = '3.0'
+                version = '3.0.0'
             }
         }
     }
