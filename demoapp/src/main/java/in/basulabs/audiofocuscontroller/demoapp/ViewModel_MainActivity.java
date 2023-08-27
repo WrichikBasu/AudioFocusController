@@ -25,65 +25,52 @@ import androidx.lifecycle.ViewModel;
 
 public class ViewModel_MainActivity extends ViewModel {
 
-	private MutableLiveData<Boolean> isEditingOn, acceptsDelayedFocus, pauseWhenDucked, listenToNoisyAudio;
+	private MutableLiveData<Boolean> isEditingOn, acceptsDelayedFocus, pauseWhenDucked,
+		listenToNoisyAudio;
 	private MutableLiveData<Integer> usage, contentType, durationHint, streamType;
 	private MutableLiveData<String> status;
 
-	//-------------------------------------------------------------------------------------------------------------
-
 	public String getStatus() {
-		if (status == null){
+		if (status == null) {
 			status = new MutableLiveData<>("N/A");
 		}
 		return status.getValue();
 	}
 
-	//-------------------------------------------------------------------------------------------------------------
-
 	public void setStatus(String status) {
-		if (this.status == null){
+		if (this.status == null) {
 			this.status = new MutableLiveData<>();
 		}
 		this.status.setValue(status);
 	}
 
-	//-------------------------------------------------------------------------------------------------------------
-
-	public LiveData<String> getLiveStatus(){
-		if (status == null){
+	public LiveData<String> getLiveStatus() {
+		if (status == null) {
 			status = new MutableLiveData<>("N/A");
 		}
 		return status;
 	}
 
-	//-------------------------------------------------------------------------------------------------------------
-
 	public boolean getListenToNoisyAudio() {
-		if (listenToNoisyAudio == null){
+		if (listenToNoisyAudio == null) {
 			listenToNoisyAudio = new MutableLiveData<>(false);
 		}
-		return listenToNoisyAudio.getValue() == null ? false : listenToNoisyAudio.getValue();
+		return listenToNoisyAudio.getValue() != null && listenToNoisyAudio.getValue();
 	}
 
-	//-------------------------------------------------------------------------------------------------------------
-
 	public void setListenToNoisyAudio(boolean listenToNoisyAudio) {
-		if (this.listenToNoisyAudio == null){
+		if (this.listenToNoisyAudio == null) {
 			this.listenToNoisyAudio = new MutableLiveData<>();
 		}
 		this.listenToNoisyAudio.setValue(listenToNoisyAudio);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
 	public boolean getIsEditingOn() {
 		if (isEditingOn == null) {
 			isEditingOn = new MutableLiveData<>(true);
 		}
-		return isEditingOn.getValue() == null ? true : isEditingOn.getValue();
+		return isEditingOn.getValue() == null || isEditingOn.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setIsEditingOn(boolean isEditingOn) {
 		if (this.isEditingOn == null) {
@@ -92,16 +79,12 @@ public class ViewModel_MainActivity extends ViewModel {
 		this.isEditingOn.setValue(isEditingOn);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
 	public boolean getAcceptsDelayedFocus() {
 		if (acceptsDelayedFocus == null) {
 			acceptsDelayedFocus = new MutableLiveData<>(true);
 		}
-		return acceptsDelayedFocus.getValue() == null ? true : acceptsDelayedFocus.getValue();
+		return acceptsDelayedFocus.getValue() == null || acceptsDelayedFocus.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setAcceptsDelayedFocus(boolean acceptsDelayedFocus) {
 		if (this.acceptsDelayedFocus == null) {
@@ -110,16 +93,12 @@ public class ViewModel_MainActivity extends ViewModel {
 		this.acceptsDelayedFocus.setValue(acceptsDelayedFocus);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
 	public boolean getPauseWhenDucked() {
 		if (pauseWhenDucked == null) {
 			pauseWhenDucked = new MutableLiveData<>(false);
 		}
-		return pauseWhenDucked.getValue() == null ? false : pauseWhenDucked.getValue();
+		return pauseWhenDucked.getValue() != null && pauseWhenDucked.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setPauseWhenDucked(boolean pauseWhenDucked) {
 		if (this.pauseWhenDucked == null) {
@@ -128,16 +107,12 @@ public class ViewModel_MainActivity extends ViewModel {
 		this.pauseWhenDucked.setValue(pauseWhenDucked);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
 	public int getUsage() {
 		if (usage == null) {
 			usage = new MutableLiveData<>(AudioAttributes.USAGE_MEDIA);
 		}
 		return usage.getValue() == null ? AudioAttributes.USAGE_MEDIA : usage.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setUsage(int usage) {
 		if (this.usage == null) {
@@ -146,34 +121,31 @@ public class ViewModel_MainActivity extends ViewModel {
 		this.usage.setValue(usage);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
 	public int getContentType() {
 		if (contentType == null) {
 			contentType = new MutableLiveData<>(AudioAttributes.CONTENT_TYPE_MUSIC);
 		}
-		return contentType.getValue() == null ? AudioAttributes.CONTENT_TYPE_MUSIC : contentType.getValue();
+		return contentType.getValue() == null
+			? AudioAttributes.CONTENT_TYPE_MUSIC
+			: contentType.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setContentType(int contentType) {
 		if (this.contentType == null) {
-			this.contentType = new MutableLiveData<>(AudioAttributes.CONTENT_TYPE_UNKNOWN);
+			this.contentType = new MutableLiveData<>(
+				AudioAttributes.CONTENT_TYPE_UNKNOWN);
 		}
 		this.contentType.setValue(contentType);
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public int getDurationHint() {
 		if (durationHint == null) {
 			durationHint = new MutableLiveData<>(AudioManager.AUDIOFOCUS_GAIN);
 		}
-		return durationHint.getValue() == null ? AudioManager.AUDIOFOCUS_GAIN : durationHint.getValue();
+		return durationHint.getValue() == null
+			? AudioManager.AUDIOFOCUS_GAIN
+			: durationHint.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setDurationHint(int durationHint) {
 		if (this.durationHint == null) {
@@ -182,28 +154,25 @@ public class ViewModel_MainActivity extends ViewModel {
 		this.durationHint.setValue(durationHint);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
 	public int getStreamType() {
 		if (streamType == null) {
 			streamType = new MutableLiveData<>(AudioManager.STREAM_MUSIC);
 		}
-		return streamType.getValue() == null ? AudioManager.STREAM_MUSIC : streamType.getValue();
+		return streamType.getValue() == null
+			? AudioManager.STREAM_MUSIC
+			: streamType.getValue();
 	}
-
-	//--------------------------------------------------------------------------------------------------------------
 
 	public void setStreamType(int streamType) {
 		if (this.streamType == null) {
-			this.streamType = new MutableLiveData<>(AudioManager.USE_DEFAULT_STREAM_TYPE);
+			this.streamType =
+				new MutableLiveData<>(AudioManager.USE_DEFAULT_STREAM_TYPE);
 		}
 		this.streamType.setValue(streamType);
 	}
 
-	//--------------------------------------------------------------------------------------------------------------
-
-	public LiveData<Boolean> getLiveIsEditingOn(){
-		if (isEditingOn == null){
+	public LiveData<Boolean> getLiveIsEditingOn() {
+		if (isEditingOn == null) {
 			isEditingOn = new MutableLiveData<>(true);
 		}
 		return isEditingOn;
