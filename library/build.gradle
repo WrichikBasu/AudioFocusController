@@ -43,14 +43,14 @@ dependencies {
 
 }
 
-project.afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                components.getByName('release')
-                groupId = 'in.basulabs.audiofocuscontroller'
-                artifactId = 'library'
-                version = '3.0.0'
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.WrichikBasu'
+            artifactId = 'AudioFocusController'
+            version = '3.0.0'
+            afterEvaluate {
+                from components.release
             }
         }
     }
