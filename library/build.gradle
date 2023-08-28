@@ -1,5 +1,22 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
+
+ext {
+    PUBLISH_GROUP_ID = 'io.github.WrichikBasu'
+    PUBLISH_VERSION = '3.0.1-SNAPSHOT'
+    PUBLISH_ARTIFACT_ID = 'AudioFocusController'
+    PUBLISH_DESCRIPTION = 'AudioFocusController Android SDK'
+    PUBLISH_URL = 'https://github.com/WrichikBasu/AudioFocusController'
+    PUBLISH_LICENSE_NAME = 'Mozilla Public License, v. 2.0'
+    PUBLISH_LICENSE_URL = 'https://www.mozilla.org/en-US/MPL/2.0/'
+    PUBLISH_DEVELOPER_ID = 'WrichikBasu'
+    PUBLISH_DEVELOPER_NAME = 'Wrichik Basu'
+    PUBLISH_DEVELOPER_EMAIL = 'basulabs.developer@gmail.com'
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/WrichikBasu/AudioFocusController.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com/WrichikBasu/AudioFocusController.git'
+    PUBLISH_SCM_URL = 'https://github.com/WrichikBasu/AudioFocusController/tree/main'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
     compileSdk 34
@@ -7,6 +24,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 34
+        versionCode 4
+        versionName '3.0.1-SNAPSHOT'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -41,17 +60,4 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-}
-
-project.afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                components.getByName('release')
-                groupId = 'in.basulabs.audiofocuscontroller'
-                artifactId = 'library'
-                version = '3.0.0'
-            }
-        }
-    }
 }
