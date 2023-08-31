@@ -52,6 +52,14 @@ publishing {
             afterEvaluate {
                 from components.release
             }
+            pom {
+                licenses {
+                    license {
+                        name = 'MPL-2.0'
+                        url = 'https://mozilla.org/MPL/2.0/'
+                    }
+                }
+            }
         }
     }
 }
