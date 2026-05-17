@@ -40,7 +40,7 @@ public abstract class AudioOptionsDatabase extends RoomDatabase {
 
 		if (instance == null) {
 			instance = Room.databaseBuilder(context.getApplicationContext(), AudioOptionsDatabase.class, DATABASE_NAME)
-					.fallbackToDestructiveMigration(true)
+					.fallbackToDestructiveMigration()
 					.allowMainThreadQueries()
 					.build();
 		}
