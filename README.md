@@ -9,8 +9,8 @@
 ![](https://img.shields.io/badge/Licence%3A%20library-Mozilla%20Public%20Licence%202.0-important?style=for-the-badge) &nbsp;
 ![](https://img.shields.io/badge/Licence%3A%20demoapp-GNU%20AGPL%20v3.0-blue?style=for-the-badge)
 
-![minSDK](https://img.shields.io/badge/min_SDK-Lollipop%20(SDK%2021)-%2306486b?style=for-the-badge) &nbsp; 
-![targetSdk](https://img.shields.io/badge/target_SDK-Android_14_(SDK_34)-deep%20green?style=for-the-badge)
+![minSDK](https://img.shields.io/badge/min_SDK-21%20(Lollipop)-%2306486b?style=for-the-badge) &nbsp; 
+![targetSdk](https://img.shields.io/badge/target_SDK-36%20(Baklava)-db4900?style=for-the-badge)
 
 ![GitHub deployments](https://img.shields.io/github/deployments/WrichikBasu/AudioFocusController/github-pages?label=Github%20Pages%20Deployment&style=for-the-badge)
 
@@ -30,9 +30,10 @@ This repository comes bundled with an app that not only demonstrates how to use 
 
 <a href="https://github.com/WrichikBasu/AudioFocusController/releases/latest"><img src="github.png"
      alt="Download from Github icon"
-     width="200" /></a>
-     
+     width="200" /></a> &nbsp;
  <a href='https://play.google.com/store/apps/details?id=in.basulabs.audiofocuscontroller.demoapp'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width=200/></a>
+
+✅ App package is registered on Google Play, so feel free to download from any source you wish.
 
 ## Contributing:
 ### Bug reports:
